@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: #d53dff;
+    --primary-color-rgb: 255, 20, 147;
+    --secondary-color: #123;
+    --secondary-color-rbg: 17, 34, 51;
+    --light-gray: #f2f2f2;
+    --middle-gray: #ccc;
+    --dark-gray: #545454;
+    --h1-size: 3rem;
+}
+
+body,
+html,
+main {
+    height: 100%;
+}

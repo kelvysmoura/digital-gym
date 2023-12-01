@@ -1,0 +1,127 @@
+#plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#plans .table-wrap {
+    max-width: 60%;
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: 0 0 50px 0 rgba(var(--secondary-color-rbg), 0.1);
+    padding-top: 20px;
+}
+
+#plans table {
+    border-collapse: collapse;
+    color: var(--dark-gray);
+    width: 100%;
+    margin-top: 20px;
+}
+
+#plans tbody tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+#plans table tbody td:nth-child(1) {
+    font-weight: bold;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+#plans table th,
+#plans table td {
+    border: 1px solid rgba(var(--secondary-color-rbg), 0.2);
+    min-width: 200px;
+}
+
+#plans table th {
+    color: var(--secondary-color);
+    padding-bottom: 20px;
+    position: relative;
+}
+
+#plans table th span {
+    display: block;
+}
+
+#plans thead .flag {
+    background: var(--secondary-color);
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    width: 100%;
+    padding: 5px
+}
+
+#plans table td {
+    color: var(--dark-gray);
+}
+
+#plans tbody td {
+    padding: 20px 10px;
+}
+
+#plans td .point {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+#plans td .point.yes {
+    background-color: var(--secondary-color);
+}
+
+#plans td .point.no {
+    background-color: var(--middle-gray);
+}
+
+#plans .plan-name {
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+#plans .plan-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#plans .plan-price::after {
+    content: "/mês";
+    font-size: 14px;
+}
+
+#plans .monthly-price-discount {
+    display: none;
+}
+
+#plans .table-wrap label {
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 20px 50px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#plans input#yearly:checked~table .monthly-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    color: var(--middle-gray);
+}
+
+#plans input#yearly:checked~table .monthly-price-discount {
+    display: block;
+}
+
+#plans .table-wrap input {
+    display: none;
+}
+
+#plans .table-wrap input[type="radio"]:checked+label {
+    border: 1px solid var(--primary-color);
+}
